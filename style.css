@@ -1,0 +1,99 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #111827;
+  background: #e5e7eb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.app {
+  max-width: 560px;
+  min-height: 100vh;
+  margin: auto;
+  background: #f8fafc;
+  padding: 16px;
+}
+header, .sectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+h1 { margin: 0; font-size: 28px; }
+h2 { margin: 0; font-size: 20px; }
+.tagline { margin: 3px 0 0; color: #64748b; }
+.badge {
+  font-size: 11px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #166534;
+  white-space: nowrap;
+}
+.hero {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+#status { min-height: 44px; display: grid; place-items: center; }
+.mic {
+  width: 92px;
+  height: 92px;
+  margin: 12px auto;
+  border-radius: 50%;
+  border: 0;
+  font-size: 36px;
+  background: white;
+  cursor: pointer;
+}
+.mic.listening { transform: scale(1.08); }
+#heard { color: #cbd5e1; min-height: 24px; }
+.commandBox {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0;
+}
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 15px;
+}
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#runBtn, #readBtn { background: #2563eb; color: white; }
+.examples, .tasks, .settings {
+  margin-top: 14px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(15,23,42,.06);
+}
+.examples div { margin-top: 8px; color: #475569; font-size: 14px; }
+.task {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 10px;
+}
+.task.done { opacity: .55; }
+.taskTitle { font-weight: bold; }
+.taskTime { font-size: 13px; color: #64748b; margin-top: 5px; }
+.taskActions { display: flex; gap: 7px; margin-top: 9px; }
+.taskActions button { padding: 8px 10px; }
+.complete { background: #dcfce7; color: #166534; }
+.delete { background: #fee2e2; color: #991b1b; }
+.danger { background: #fee2e2; color: #991b1b; width: 100%; }
+.settings { display: grid; gap: 9px; }
+#installBtn { background: #0f172a; color: white; }
+footer { text-align: center; color: #64748b; padding: 20px 0; }
+.empty { color: #64748b; text-align: center; padding: 20px; }

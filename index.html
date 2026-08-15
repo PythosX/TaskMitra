@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="TaskMitra - offline-first voice task assistant">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+  <title>TaskMitra</title>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <h1>TaskMitra</h1>
+        <p class="tagline">Offline Voice Task Assistant</p>
+      </div>
+      <span id="onlineBadge" class="badge">OFFLINE READY</span>
+    </header>
+
+    <section class="hero">
+      <div id="status">Ready. Tap the microphone or type a command.</div>
+      <button id="micBtn" class="mic" aria-label="Start voice command">🎤</button>
+      <div id="heard">You said: —</div>
+    </section>
+
+    <section class="commandBox">
+      <input id="commandInput" autocomplete="off"
+             placeholder="Try: add task study at 7 PM">
+      <button id="runBtn">Run</button>
+    </section>
+
+    <section class="examples">
+      <b>Try saying:</b>
+      <div>"Add task study at 7 PM"</div>
+      <div>"Remind me to submit assignment tomorrow at 10 AM"</div>
+      <div>"What are my tasks?"</div>
+      <div>"Complete task study"</div>
+      <div>"Delete task study"</div>
+    </section>
+
+    <section class="tasks">
+      <div class="sectionHead">
+        <h2>My Tasks</h2>
+        <button id="readBtn">🔊 Read</button>
+      </div>
+      <div id="taskList"></div>
+    </section>
+
+    <section class="settings">
+      <button id="installBtn" hidden>📲 Install TaskMitra</button>
+      <button id="clearBtn" class="danger">Clear completed</button>
+    </section>
+
+    <footer>
+      <small>Tasks are stored on this phone. No account is required.</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
